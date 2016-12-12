@@ -1,0 +1,504 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+
+
+
+#logo{
+    font-family: 'Amatic SC', cursive;
+    background: rgba(255,0,0,.5);
+    height: 100%;
+    line-height: 70px;
+    padding-left: 75px;
+    cursor: pointer; 
+}
+#logo h1 a{
+    text-decoration: none;
+    color: inherit;
+}
+#logo h1{
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+#logo h1:hover{
+    animation: log 2s linear alternate infinite;
+}
+
+@keyframes log{
+    0%,10%,20%,30%,40%,50%,60%,70%,80%,90%{
+        transform: rotate(-2deg);
+        color: black;
+    }
+    5%,15%,25%,35%,45%,55%,65%,75%,85%,95%{
+        transform:  rotate(2deg);
+        color: white;
+    }
+
+}
+#hdr{
+   
+    
+    background: white;
+    box-shadow: 0px 0px 10px 5px black;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+}
+.mid-ctn{
+
+    position: relative;
+    top: 70px;
+    z-index: -1;
+  
+}
+#nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    background-color: rgba(255,255,255, .5);
+    height: 100%;
+    padding-top: 200px;
+    box-shadow: 0px 0px 10px 0px black;
+}
+#nav ul li a{
+   
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    padding-top: 5px;
+    margin-top: -10px;
+    height: 30px;
+    transition: all .4s linear;
+    line-height: 25px;
+}
+#nav ul li{
+    text-align: center;
+    padding-top: 10px;
+    /*background: rgba(0,0,0, .2);*/
+    background: linear-gradient(to right, rgba(0,0,0,.3) 0%,rgba(0,0,0,.2) 30%,rgba(0,0,0,0) 50%,rgba(0,0,0,.2) 70%, rgba(0,0,0,.3) 100%);
+    color: black;
+    margin: 5px auto;
+    height: 25px;
+    cursor: pointer;
+    transition: all .5s ease;
+    filter: blur(.8px);
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    line-height: 15px;
+
+}
+#nav ul li:hover{
+    color: white;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,.6) 30%,rgba(0,0,0,.7) 50%,rgba(0,0,0,.6) 70%, rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: blur(0px);
+}
+#nav ul li:hover > a{
+    color: white;
+}
+
+#wrapper{
+
+    background: red;
+    position: absolute;
+    width: 80%;
+    height: 80vh;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(255,255,255, .5);
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+}
+#wrapper ul{
+    margin-top: 40px;
+    position: relative;
+    left: 0%;
+    list-style: none;
+}
+#wrapper ul li{
+    display: inline;
+}
+#wrapper li input {
+    
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+    background: rgba(255,255,255,.7);
+    border: none;
+    border-radius: 5px;
+    color: black;
+    display: inline-block;
+    font-weight: 700;
+    height: 50px;
+    line-height: 25px;
+    max-width: 305px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 20px;
+    box-shadow: 0px 0px 30px 5px black;
+
+
+}
+
+#wrapper li input:hover{
+
+    background-color: rgba(0,0,0,.7);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 0px 0px black; 
+}
+#wrapper li input:active{
+    transform: scale(.95);
+
+}
+.controls{
+    position: absolute;
+    top: 0px;
+    left: 20px;
+
+}
+
+.qtn{
+    margin-top: 120px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px 5px black;
+    padding: 30px ;
+    width: 80%;
+    left: 5%;
+    position: relative;
+}
+
+.crct{
+    background: rgb(0,255,0);
+}
+.wrong{
+    background: rgb(255,0,0);
+}
+
+#btn{
+    
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+   margin-top: 20px;
+   background-color: rgba(255,255,255,.6);
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   box-shadow: 0px 0px 30px 5px black;
+   transition: all .2s ease-in;
+}
+#btn:hover{
+     
+    background-color: black;
+    color:white;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 0px black; 
+}
+#btn:active{
+    transform: scale(.9);
+}
+.ftr{
+    position: absolute;
+    width: 100%;
+    bottom: -90px;
+    height: 110px;
+    background: red;
+}
+.error{
+     position: absolute;
+     font-family: 'Amatic SC', cursive;
+     right: 5%;
+     margin-top: 15px;
+     font-size: 25px;
+     color: rgb(170,170,170);
+     
+     top:75vh;
+}
+.frm{
+
+    top: 20px;
+    width: 85%;
+    left: 5%;
+    
+    position: relative;
+    background: gray;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px 0px black; 
+}
+.frm button{
+    border: none;
+    border-radius: 5px;
+    background: white;
+    padding: 5px 20px;
+    margin: 20px 20px;
+    box-shadow: 0px 0px 10px 2px black;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+}
+.frm button:hover{
+    color: white;
+    background: rgba(0,0,0,.5);
+    box-shadow: 0px 0px 0px 0px black, 0px 0px 0px 3px white inset;
+
+}
+.frm button:active{
+    box-shadow: none;
+}
+.frm input{
+
+    text-align: center;
+    padding: 2px 5px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    height: 30px;
+    border-radius: 5px;
+     box-shadow: 0px 0px 10px 2px black;
+}
+.loading{
+    background: white;
+    line-height: 300px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+.loader{
+    position: relative;
+    margin-left: -50px;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    margin-top: -100px;
+    border-radius: 100%;
+    border-top: 5px solid blue;
+    border-bottom: 5px solid blue;
+    border-left: 5px solid white;
+    border-right: 5px  solid white;
+    animation: load 1s linear alternate infinite;
+}
+
+@keyframes load{
+
+    0%{
+        transform: rotate(0) ;  
+        border-top: 25px solid blue;
+         border-bottom: 25px solid blue;
+    }
+    100%{
+        transform: rotate(1080deg);
+        border-top: 25px solid blue;
+         border-bottom: 25px solid blue;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SCoreBOard */ 
+
+.scoreboard{
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    border: 2px solid gray;
+    padding: 10px 100px;
+
+    border-radius: 34px 144px 33px 158px;
+    -moz-border-radius: 34px 144px 33px 158px;
+   -webkit-border-radius: 34px 144px 33px 158px;
+    box-shadow: 0px 0px 30px 5px black;
+       
+}
+.scoreboard th{
+    font-size: 25px;
+
+}
+.scoreboard td {
+    
+    position: relative;
+    border-top: 2px solid gray;
+    width: 100px;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-left: none;
+    border-right: none;
+}
+.scoreboard tr td:first-child{
+
+    width: 20px;
+}
+.scoreboard tr{
+    cursor: pointer;
+}
+.scoreboard tr:hover{
+    background-color: rgba(200,0,0,.2);
+}
+.scoreboard tr:last-child{
+    border-bottom-left-radius: 20px;
+}
+.search{
+    padding: 20px 0px;
+    background: rgba(0,0,0,.3);
+    position: relative;
+    width: 25%;
+    margin-top: 10%;
+    left: 66%;
+    border-radius: 34px 144px 33px 158px;
+    box-shadow: 0px 0px 30px 5px black;
+
+}
+#scoring .ng-enter{
+    transition: all .5s ease;
+    opacity: 0;
+    transform: translateX(100px);
+}
+#scoring .ng-enter.ng-enter-active{
+
+    opacity: 1;
+    transform: translateX(0px);
+}
+#scoring .ng-enter-stagger{
+
+    transition-delay: .1s;
+    transition-duration: 0;
+
+}
+
+
+
+
+
+/*Add Question Page CSS*/
+.addq{
+   
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.addq textarea{
+
+    width: 80%;
+    margin-top: 20px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    resize: none;
+    position: relative;
+    border: none;
+    box-shadow: 0px 0px 20px 5px black;
+    border-radius: 10px;
+    padding: 5px 15px;
+    transition: all .3s ease;
+}
+.addq textarea:focus{
+    box-shadow: 0px 0px 30px 5px black;
+}
+.answers{
+    margin-top: 10px;
+    width: 100%;
+}
+.answers th{
+    height: 30px;
+    font-size: 25px;
+}
+.answers td{
+    height: 50px;
+}
+.answers tr {
+   
+    height: 20px;
+}
+.a{
+    height: 20px;
+}
+.textes input{
+    font-family: 'Amatic SC', cursive;
+    height: 25px;
+    width: 60%;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 3px black;
+    transition: all .3s ease-in-out;
+    padding: 3px 10px;
+}
+.textes input:hover{
+        transform: scale(1.1);
+}
+.textes input:focus{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 5px green;
+}
+.bttb{
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    line-height: 10px;
+    margin-top: 20px;
+    height: 35px;
+    padding: 10px 35px;
+    border: none;
+    background: none;
+    box-shadow: 0px 0px 40px 5px black;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    
+}
+.bttb:hover{
+    box-shadow: 0px 0px 20px 5px black;
+   
+}
+.bttb:active{
+
+    transform: scale(0.9);
+}
+.feedback{   
+    margin-top: 50px;
+    padding-left: 20px;
+    text-align: left;
+}
+.ok{
+    color: lime;
+}
+.notok{
+    color: red;
+}
+
+@media screen and (max-width)
+{
+
+
+
+
+}

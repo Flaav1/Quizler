@@ -1,0 +1,38 @@
+﻿
+
+<h2 id="clock">{{ score }}</h2>
+<div ng-hide="inprogress">
+    <h1 class="qtn" ng-class="{ true :'crct', false :'wrong'}[correct]"> {{ inbetween }} </h1>
+</div>
+
+<div ng-show="inprogress">
+    <h1 class="qtn"> {{ question.Question }}</h1>
+
+    <ul>
+        <li ng-repeat="ans in question.Options track by $index"><input type="button" value="{{ ans }}" ng-click="CheckAnswer(ans)" />  </li>
+    </ul>
+</div>
+<div  ng-show="answered">
+    <input id="btn" type="button" value="Next" ng-click="Next()" /><i class="glyphicon glyphicon-chevron-right"></i>
+</div>
+
+<div class="controls">
+    <input id="btn" ng-show="initialized" type="button" ng-click="Start()" value="Restart" />
+    <input id="btn" ng-hide="initialized" type="button" ng-click="Start()" value="Start" />
+</div>
+
+<div ng-show="loading" class="loading">
+
+    <h1> LOADING </h1>
+    <div class="loader">
+
+
+    </div>
+</div>
+
+<div ng-show="over" class="frm">
+
+    <h1> Submit your Score ?  </h1> <input ng-model="txt" type="text" /> <button ng-click="submit()"> Submit! </button>
+    <h2> {{ respons }}</h2>
+</div>
+

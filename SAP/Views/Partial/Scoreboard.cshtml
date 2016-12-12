@@ -1,0 +1,33 @@
+﻿
+<div class="scoreboard">
+
+    <table id="scoring">
+        <tr>
+            <th> Rank</th>
+            <th> Name</th>
+            <th> Score</th>
+        </tr>
+      
+         <tr ng-repeat="user in respons | orderBy:'score':true | filter:searchTxt ">
+                    <td>{{ $index+1 }}</td>
+                    <td>{{ user.name | uppercase }}</td>
+                    <td>{{ user.score }}</td>
+        </tr>
+      
+    </table>
+
+</div>
+
+<div class="search">
+
+    <i class="fa fa-2x fa-search"></i> <input type="text" placeholder="UserName Here" ng-model="searchTxt.name"/>
+
+</div>
+<div ng-show="loading" class="loading">
+
+    <h1> LOADING </h1>
+    <div class="loader">
+
+
+    </div>
+</div>

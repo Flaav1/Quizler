@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>SPA Apps</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Shadows+Into+Light" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    
+</head>
+<body >
+    <div id="hdr">
+        <div id="logo">
+            <h1><a href="#/Home"> &#60 QUIZLER &#62 </a></h1>
+        </div>
+    </div>
+
+    <div class="mid-ctn">
+        <div id="nav">
+            <ul>
+                <li><a href="#/Play"> PLAY </a> </li>
+                <li><a href="#/Score"> SCOREBOARD </a></li>
+                <li><a href="#/AddQ"> ADD QUESTION </a></li>
+                <li><a href="#/About"> ABOUT</a> </li>
+
+            </ul>
+        </div>
+      
+            <div ng-controller="myController">
+                <div id="wrapper" ng-view>
+
+                </div>
+
+            </div>
+       
+
+
+            <h2 class="error"> &#60 error:404 &#62 Footer Not Found!  &#60 /error:404 &#62 </h2>
+
+
+        </div>
+   
+   
+    @Scripts.Render("~/bundles/nglr")
+  
+</body>
+</html>

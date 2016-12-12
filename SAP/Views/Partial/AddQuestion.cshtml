@@ -1,0 +1,44 @@
+﻿<div class="addq">
+    
+
+    <h1> Enter your Question : </h1>
+    <textarea ng-model="question" name="Text1" rows="3"></textarea>
+
+    <h1> Enter your Answers :</h1>
+
+    <table class="answers">
+
+        <tr>
+            <th>Answer 1 </th>
+            <th>Answer 2 </th>
+            <th>Answer 3 </th>
+            <th>Answer 4 </th>
+        </tr>
+        <tr class="textes">
+            <td>
+                <input type="text" ng-model="answer1" />
+            </td>
+            <td>
+                <input type="text" ng-model="answer2" />
+            </td>
+            <td>
+                <input type="text" ng-model="answer3" />
+            </td>
+            <td>
+                <input type="text" ng-model="answer4" />
+            </td>
+         </tr>
+        <tr class="boxes">
+            <td ng-repeat="subscription in entities">
+                <input type="checkbox" ng-model="subscription.checked" ng-click="updateSelection($index, entities)" /> Correct Answer 
+            </td>
+        </tr>
+    </table>
+
+    <input class="bttb" type="button" ng-click="Submit()" value="SUBMIT" />
+
+    <h1 ng-class="{ true :'ok', false :'notok'}[fdbck]" class="feedback"> {{ respons }}</h1>
+    
+    <tt ng-hide="true">{{entities}}</tt>
+    
+</div>
